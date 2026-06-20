@@ -3,483 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeHub – Learn to Code</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>CodeHub – Learn to Code, Build the Web</title>
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
 <!-- ════════════════════════════
-     TOPBAR / HEADER
+     NAVBAR
 ════════════════════════════ -->
-<header>
+<nav class="navbar">
   <a class="logo" href="#">
     <div class="logo-icon">&#123;&#125;</div>
     CodeHub
   </a>
 
-  <div class="search-bar">
-    <svg width="14" height="14" fill="none" viewBox="0 0 24 24"
-         stroke="currentColor" stroke-width="2">
-      <circle cx="11" cy="11" r="8"/>
-      <path d="M21 21l-4.35-4.35"/>
-    </svg>
-    <input type="text" placeholder="Search tutorials, topics…">
+  <ul class="nav-links">
+    <li><a href="#">Tutorials</a></li>
+    <li><a href="#">References</a></li>
+    <li><a href="#">Exercises</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Quizzes</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="#" class="btn btn-ghost">Log in</a>
+    <a href="#" class="btn btn-primary">Sign up free</a>
+  </div>
+</nav>
+
+<!-- ════════════════════════════
+     HERO
+════════════════════════════ -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span></span> 500+ free tutorials · no account needed
   </div>
 
-  <nav class="nav-pills">
-    <button class="nav-pill active"  onclick="showSection('html',   this)">HTML</button>
-    <button class="nav-pill"         onclick="showSection('css',    this)">CSS</button>
-    <button class="nav-pill"         onclick="showSection('js',     this)">JavaScript</button>
-    <button class="nav-pill"         onclick="showSection('python', this)">Python</button>
-    <button class="nav-pill"         onclick="showSection('sql',    this)">SQL</button>
-  </nav>
-</header>
+  <h1 class="hero-title">
+    Learn to code.<br>
+    <span class="highlight">Build the web.</span>
+  </h1>
+
+  <p class="hero-sub">
+    The fastest way to learn HTML, CSS, JavaScript, Python, SQL and more —
+    with interactive examples you can edit right in your browser.
+  </p>
+
+  <div class="hero-cta">
+    <a href="html_tls.html" class="btn btn-hero">Start Learning →</a>
+    <a href="#languages" class="btn btn-outline">Browse Topics</a>
+  </div>
+
+  <!-- mini live code preview -->
+  <div class="hero-code">
+    <div class="hero-code-bar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <span class="filename">hello.html</span>
+    </div>
+    <pre><span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span><span class="op">=</span><span class="str">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;title&gt;</span>My First Page<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>Hello, World!<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>I just wrote my first webpage 🎉<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span><span class="cursor"></span></pre>
+  </div>
+</section>
 
 <!-- ════════════════════════════
-     MAIN LAYOUT
+     STATS STRIP
 ════════════════════════════ -->
-<div class="layout">
+<div class="stats-strip">
+  <div class="stat">
+    <div class="stat-num">500<span class="accent">+</span></div>
+    <div class="stat-label">Free tutorials</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">12<span class="accent">M</span></div>
+    <div class="stat-label">Learners worldwide</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">40<span class="accent">+</span></div>
+    <div class="stat-label">Topics covered</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">1<span class="accent">K</span></div>
+    <div class="stat-label">Code examples</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100<span class="accent">%</span></div>
+    <div class="stat-label">Free forever</div>
+  </div>
+</div>
 
-  <!-- ── SIDEBAR ── -->
-  <aside class="sidebar">
-    <div class="progress-label">Your progress – HTML</div>
-    <div class="progress-bar-wrap">
-      <div class="progress-bar-fill"></div>
-    </div>
+<!-- ════════════════════════════
+     LANGUAGE CARDS
+════════════════════════════ -->
+<section class="section" id="languages">
+  <div class="section-inner">
+    <div class="section-eyebrow">What to learn</div>
+    <h2 class="section-title">Pick your language</h2>
+    <p class="section-sub">Every track starts from zero — no prior experience needed.</p>
 
-    <div class="sidebar-section">
-      <div class="sidebar-heading">Getting Started</div>
-      <div class="sidebar-item"        onclick="loadLesson('intro',      this)">🏠 Introduction</div>
-      <div class="sidebar-item active" onclick="loadLesson('basic',      this)">📄 Basic Structure</div>
-      <div class="sidebar-item"        onclick="loadLesson('elements',   this)">🏷️ HTML Elements</div>
-      <div class="sidebar-item"        onclick="loadLesson('attributes', this)">⚙️ Attributes</div>
-    </div>
+    <div class="lang-grid">
 
-    <div class="sidebar-section">
-      <div class="sidebar-heading">Core Concepts</div>
-      <div class="sidebar-item" onclick="loadLesson('headings',   this)">🔤 Headings</div>
-      <div class="sidebar-item" onclick="loadLesson('paragraphs',this)">📝 Paragraphs</div>
-      <div class="sidebar-item" onclick="loadLesson('links',      this)">
-        🔗 Links <span class="tag">New</span>
-      </div>
-      <div class="sidebar-item" onclick="loadLesson('images', this)">🖼️ Images</div>
-      <div class="sidebar-item" onclick="loadLesson('lists',  this)">📋 Lists</div>
-      <div class="sidebar-item" onclick="loadLesson('tables', this)">📊 Tables</div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-heading">Forms &amp; Input</div>
-      <div class="sidebar-item" onclick="loadLesson('forms',      this)">📬 Forms</div>
-      <div class="sidebar-item" onclick="loadLesson('input',      this)">⌨️ Input Types</div>
-      <div class="sidebar-item" onclick="loadLesson('validation', this)">✅ Validation</div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-heading">Advanced</div>
-      <div class="sidebar-item" onclick="loadLesson('semantic', this)">
-        🏗️ Semantic HTML <span class="tag new">New</span>
-      </div>
-      <div class="sidebar-item" onclick="loadLesson('canvas', this)">🎨 Canvas</div>
-      <div class="sidebar-item" onclick="loadLesson('media',  this)">🎵 Audio &amp; Video</div>
-    </div>
-  </aside>
-
-  <!-- ── MAIN ── -->
-  <main class="main">
-    <div class="content" id="lesson-content">
-
-      <!-- Breadcrumb -->
-      <div class="breadcrumb">
-        <span>HTML</span>
-        <span style="color:var(--muted)">›</span>
-        Getting Started
-        <span style="color:var(--muted)">›</span>
-        Basic Structure
-      </div>
-
-      <!-- Title -->
-      <h1 class="page-title">HTML Basic Structure</h1>
-
-      <div class="page-meta">
-        <span class="badge badge-beginner">Beginner</span>
-        <span class="read-time">⏱ 8 min read</span>
-      </div>
-
-      <!-- ── PROSE ── -->
-      <div class="prose">
-        <p>Every webpage you've ever visited is built on HTML —
-          <strong>HyperText Markup Language</strong>. It's not a programming language;
-          it's a <em>markup language</em> that tells your browser how to structure and
-          display content.</p>
-
-        <h2>The Anatomy of an HTML Document</h2>
-
-        <p>A valid HTML document has a predictable skeleton. Think of it like the bones
-          of a webpage — without the right structure, things fall apart.</p>
-
-        <div class="callout callout-tip">
-          <strong>💡 Tip</strong>
-          Every HTML file you create should start with <code>&lt;!DOCTYPE html&gt;</code>.
-          This tells the browser you're writing modern HTML5 — without it, browsers enter
-          "quirks mode" and render things inconsistently.
+      <div class="lang-card html" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">🌐</div>
+        <div>
+          <div class="lang-name">HTML</div>
+          <div class="lang-count">52 lessons</div>
         </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:90%"></div></div>
       </div>
 
-      <!-- ── CODE BLOCK ── -->
-      <div class="code-block">
-        <div class="code-toolbar">
-          <div class="code-dots"><span></span><span></span><span></span></div>
-          <div class="code-lang">HTML</div>
-          <div class="code-btn">
-            <button class="btn-sm" onclick="copyCode(this)">Copy</button>
+      <div class="lang-card css" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">🎨</div>
+        <div>
+          <div class="lang-name">CSS</div>
+          <div class="lang-count">68 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:85%"></div></div>
+      </div>
+
+      <div class="lang-card js" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">⚡</div>
+        <div>
+          <div class="lang-name">JavaScript</div>
+          <div class="lang-count">94 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:95%"></div></div>
+      </div>
+
+      <div class="lang-card python" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">🐍</div>
+        <div>
+          <div class="lang-name">Python</div>
+          <div class="lang-count">76 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:80%"></div></div>
+      </div>
+
+      <div class="lang-card sql" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">🗄️</div>
+        <div>
+          <div class="lang-name">SQL</div>
+          <div class="lang-count">44 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:70%"></div></div>
+      </div>
+
+      <div class="lang-card react" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">⚛️</div>
+        <div>
+          <div class="lang-name">React</div>
+          <div class="lang-count">58 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:75%"></div></div>
+      </div>
+
+      <div class="lang-card node" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">🟢</div>
+        <div>
+          <div class="lang-name">Node.js</div>
+          <div class="lang-count">36 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:60%"></div></div>
+      </div>
+
+      <div class="lang-card git" onclick="window.location='html_tls.html'">
+        <div class="lang-icon">🌿</div>
+        <div>
+          <div class="lang-name">Git</div>
+          <div class="lang-count">28 lessons</div>
+        </div>
+        <div class="lang-bar"><div class="lang-bar-fill" style="width:55%"></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     FEATURES
+════════════════════════════ -->
+<section class="section" style="background: var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why CodeHub</div>
+    <h2 class="section-title">Built for how people actually learn</h2>
+    <p class="section-sub">We removed everything that makes learning to code feel hard.</p>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon fi-green">▶️</div>
+        <div class="feature-title">Run code in your browser</div>
+        <div class="feature-desc">Every lesson has a live editor. Type, see results instantly — no installs, no setup, no friction.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">📐</div>
+        <div class="feature-title">Clear, structured paths</div>
+        <div class="feature-desc">Lessons are ordered so each one builds on the last. You always know what to learn next.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-orange">🧩</div>
+        <div class="feature-title">Exercises after every topic</div>
+        <div class="feature-desc">Practice what you learn with real coding challenges. See hints when you're stuck.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">📖</div>
+        <div class="feature-title">Reference anytime</div>
+        <div class="feature-desc">Complete cheat sheets and tag references for when you're building real projects.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-red">🏆</div>
+        <div class="feature-title">Track your progress</div>
+        <div class="feature-desc">Earn badges as you complete topics. See exactly how far you've come.</div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-pink">📱</div>
+        <div class="feature-title">Works on any device</div>
+        <div class="feature-desc">Learn on your laptop, tablet, or phone. Your progress syncs everywhere.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     POPULAR TUTORIALS
+════════════════════════════ -->
+<section class="section tutorials-section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Trending now</div>
+    <h2 class="section-title">Most popular tutorials</h2>
+    <p class="section-sub">Start anywhere — these are the lessons learners love most.</p>
+
+    <div class="tutorial-list">
+
+      <div class="tutorial-row" onclick="window.location='html_tls.html'">
+        <div class="tut-num">01</div>
+        <div class="tut-icon">🌐</div>
+        <div class="tut-info">
+          <div class="tut-title">HTML Basics – Build your first webpage</div>
+          <div class="tut-meta">HTML · 52 lessons · 2.1M learners</div>
+        </div>
+        <span class="tut-badge tut-beginner">Beginner</span>
+        <span class="tut-arrow">›</span>
+      </div>
+
+      <div class="tutorial-row" onclick="window.location='html_tls.html'">
+        <div class="tut-num">02</div>
+        <div class="tut-icon">🎨</div>
+        <div class="tut-info">
+          <div class="tut-title">CSS Flexbox – Master modern layouts</div>
+          <div class="tut-meta">CSS · 14 lessons · 1.8M learners</div>
+        </div>
+        <span class="tut-badge tut-beginner">Beginner</span>
+        <span class="tut-arrow">›</span>
+      </div>
+
+      <div class="tutorial-row" onclick="window.location='html_tls.html'">
+        <div class="tut-num">03</div>
+        <div class="tut-icon">⚡</div>
+        <div class="tut-info">
+          <div class="tut-title">JavaScript DOM – Make pages interactive</div>
+          <div class="tut-meta">JS · 28 lessons · 1.5M learners</div>
+        </div>
+        <span class="tut-badge tut-intermediate">Intermediate</span>
+        <span class="tut-arrow">›</span>
+      </div>
+
+      <div class="tutorial-row" onclick="window.location='html_tls.html'">
+        <div class="tut-num">04</div>
+        <div class="tut-icon">🐍</div>
+        <div class="tut-info">
+          <div class="tut-title">Python for Beginners – Variables to functions</div>
+          <div class="tut-meta">Python · 40 lessons · 1.3M learners</div>
+        </div>
+        <span class="tut-badge tut-beginner">Beginner</span>
+        <span class="tut-arrow">›</span>
+      </div>
+
+      <div class="tutorial-row" onclick="window.location='html_tls.html'">
+        <div class="tut-num">05</div>
+        <div class="tut-icon">🗄️</div>
+        <div class="tut-info">
+          <div class="tut-title">SQL SELECT – Query a real database</div>
+          <div class="tut-meta">SQL · 18 lessons · 980K learners</div>
+        </div>
+        <span class="tut-badge tut-beginner">Beginner</span>
+        <span class="tut-arrow">›</span>
+      </div>
+
+      <div class="tutorial-row" onclick="window.location='html_tls.html'">
+        <div class="tut-num">06</div>
+        <div class="tut-icon">⚛️</div>
+        <div class="tut-info">
+          <div class="tut-title">React Hooks – useState and useEffect explained</div>
+          <div class="tut-meta">React · 22 lessons · 870K learners</div>
+        </div>
+        <span class="tut-badge tut-intermediate">Intermediate</span>
+        <span class="tut-arrow">›</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     LEARNING PATH
+════════════════════════════ -->
+<section class="section" style="border-top:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-eyebrow">Suggested path</div>
+    <h2 class="section-title">From zero to full-stack</h2>
+    <p class="section-sub">Follow this order if you're starting from scratch.</p>
+
+    <div class="path-steps">
+
+      <div class="path-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Structure with HTML</div>
+          <div class="step-desc">Learn what a webpage is made of. Tags, elements, attributes, forms, and semantic structure.</div>
+          <div class="step-tags">
+            <span class="step-tag">Tags</span>
+            <span class="step-tag">Attributes</span>
+            <span class="step-tag">Forms</span>
+            <span class="step-tag">Semantic HTML</span>
           </div>
         </div>
-        <div class="code-area">
-<pre><span class="cm">&lt;!-- Every HTML page starts with this --&gt;</span>
-<span class="op">&lt;!</span><span class="kw">DOCTYPE</span> <span class="attr">html</span><span class="op">&gt;</span>
-
-<span class="tag-c">&lt;html</span> <span class="attr">lang</span><span class="op">=</span><span class="str">"en"</span><span class="tag-c">&gt;</span>
-
-  <span class="tag-c">&lt;head&gt;</span>
-    <span class="tag-c">&lt;meta</span> <span class="attr">charset</span><span class="op">=</span><span class="str">"UTF-8"</span><span class="tag-c">&gt;</span>
-    <span class="tag-c">&lt;meta</span> <span class="attr">name</span><span class="op">=</span><span class="str">"viewport"</span> <span class="attr">content</span><span class="op">=</span><span class="str">"width=device-width, initial-scale=1.0"</span><span class="tag-c">&gt;</span>
-    <span class="tag-c">&lt;title&gt;</span>My First Webpage<span class="tag-c">&lt;/title&gt;</span>
-  <span class="tag-c">&lt;/head&gt;</span>
-
-  <span class="tag-c">&lt;body&gt;</span>
-    <span class="tag-c">&lt;h1&gt;</span>Hello, World!<span class="tag-c">&lt;/h1&gt;</span>
-    <span class="tag-c">&lt;p&gt;</span>Welcome to my first webpage.<span class="tag-c">&lt;/p&gt;</span>
-  <span class="tag-c">&lt;/body&gt;</span>
-
-<span class="tag-c">&lt;/html&gt;</span></pre>
-        </div>
       </div>
 
-      <!-- ── MORE PROSE ── -->
-      <div class="prose">
-        <h2>What Each Tag Does</h2>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Tag</th>
-              <th>Purpose</th>
-              <th>Required?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>&lt;!DOCTYPE html&gt;</code></td>
-              <td>Declares the document type as HTML5</td>
-              <td>✅ Yes</td>
-            </tr>
-            <tr>
-              <td><code>&lt;html&gt;</code></td>
-              <td>The root element — wraps everything</td>
-              <td>✅ Yes</td>
-            </tr>
-            <tr>
-              <td><code>&lt;head&gt;</code></td>
-              <td>Metadata container — not visible to users</td>
-              <td>✅ Yes</td>
-            </tr>
-            <tr>
-              <td><code>&lt;meta charset&gt;</code></td>
-              <td>Sets character encoding (use UTF-8 always)</td>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <td><code>&lt;title&gt;</code></td>
-              <td>Sets the browser tab title</td>
-              <td>Recommended</td>
-            </tr>
-            <tr>
-              <td><code>&lt;body&gt;</code></td>
-              <td>All visible page content goes here</td>
-              <td>✅ Yes</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>Opening vs. Closing Tags</h2>
-        <p>Most HTML elements have an opening tag like <code>&lt;p&gt;</code> and a
-          closing tag like <code>&lt;/p&gt;</code>. The content goes between them.
-          Some elements are <strong>self-closing</strong> — they don't wrap content,
-          like <code>&lt;meta&gt;</code>, <code>&lt;img&gt;</code>,
-          and <code>&lt;br&gt;</code>.</p>
-
-        <div class="callout callout-warn">
-          <strong>⚠️ Watch Out</strong>
-          Forgetting to close tags is the most common beginner mistake. Always close
-          what you open, in reverse order — like nested boxes.
-        </div>
-
-        <h2>Try It Yourself</h2>
-        <p>Edit the HTML below and click <strong>Run</strong> to see your changes
-          live in the preview panel.</p>
-      </div>
-
-      <!-- ── TRY IT EDITOR ── -->
-      <div class="try-it-block">
-        <div class="try-it-header">
-          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125
-                 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0
-                 01-1.667-.986V5.653z"/>
-          </svg>
-          <span>Try It Yourself</span>
-        </div>
-
-        <div class="try-it-body">
-          <div class="editor-pane">
-            <div class="pane-label">HTML Editor</div>
-            <textarea class="code-editor" id="liveEditor">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;My Page&lt;/title&gt;
-  &lt;style&gt;
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    h1   { color: #6c63ff; }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello, World!&lt;/h1&gt;
-  &lt;p&gt;Edit this code and click Run ▶&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Learn HTML&lt;/li&gt;
-    &lt;li&gt;Learn CSS&lt;/li&gt;
-    &lt;li&gt;Build things!&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/body&gt;
-&lt;/html&gt;</textarea>
-          </div>
-          <div class="output-pane">
-            <div class="pane-label">Preview</div>
-            <iframe id="livePreview" title="Live Preview"></iframe>
+      <div class="path-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">Style with CSS</div>
+          <div class="step-desc">Make it look good. Colors, fonts, layout with Flexbox and Grid, and responsive design.</div>
+          <div class="step-tags">
+            <span class="step-tag">Selectors</span>
+            <span class="step-tag">Flexbox</span>
+            <span class="step-tag">Grid</span>
+            <span class="step-tag">Responsive</span>
           </div>
         </div>
+      </div>
 
-        <div class="try-it-footer">
-          <button class="btn-sm" onclick="resetEditor()">↺ Reset</button>
-          <button class="btn-sm btn-run" onclick="runCode()">▶ Run</button>
+      <div class="path-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">Interact with JavaScript</div>
+          <div class="step-desc">Add logic and behavior. Variables, functions, events, DOM manipulation, and async/await.</div>
+          <div class="step-tags">
+            <span class="step-tag">DOM</span>
+            <span class="step-tag">Events</span>
+            <span class="step-tag">Arrays</span>
+            <span class="step-tag">Fetch API</span>
+          </div>
         </div>
       </div>
 
-      <!-- ── KEY TAKEAWAYS ── -->
-      <div class="prose">
-        <h2>Key Takeaways</h2>
+      <div class="path-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Go deeper</div>
+          <div class="step-desc">Pick a speciality — React for frontend, Node.js for backend, Python for data, SQL for databases.</div>
+          <div class="step-tags">
+            <span class="step-tag">React</span>
+            <span class="step-tag">Node.js</span>
+            <span class="step-tag">Python</span>
+            <span class="step-tag">SQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     CTA BANNER
+════════════════════════════ -->
+<section class="section" style="border-top:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="cta-banner">
+      <h2 class="cta-title">Ready to write your first line of code?</h2>
+      <p class="cta-sub">Free. No signup required. Just open a lesson and start typing.</p>
+      <div class="cta-actions">
+        <a href="html_tls.html" class="btn btn-hero">Start with HTML →</a>
+        <a href="#languages" class="btn btn-outline">See all topics</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     FOOTER
+════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#">
+          <div class="logo-icon">&#123;&#125;</div>
+          CodeHub
+        </a>
+        <p>Free coding tutorials for everyone. Learn at your own pace, in your own browser.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Tutorials</div>
         <ul>
-          <li>Always start with <code>&lt;!DOCTYPE html&gt;</code></li>
-          <li>The <code>&lt;head&gt;</code> holds metadata; <code>&lt;body&gt;</code>
-              holds visible content</li>
-          <li>Most tags need to be opened <em>and</em> closed</li>
-          <li>Nesting order matters — close inner tags before outer ones</li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">SQL</a></li>
+          <li><a href="#">React</a></li>
         </ul>
       </div>
 
-      <!-- ── LESSON NAV ── -->
-      <div class="lesson-nav">
-        <a class="nav-card prev" onclick="loadLesson('intro', this)">
-          <div class="nav-card-label">← Previous</div>
-          <div class="nav-card-title">HTML Introduction</div>
-        </a>
-        <a class="nav-card next" onclick="loadLesson('elements', this)">
-          <div class="nav-card-label">Next →</div>
-          <div class="nav-card-title">HTML Elements</div>
-        </a>
+      <div class="footer-col">
+        <div class="footer-col-title">Resources</div>
+        <ul>
+          <li><a href="#">References</a></li>
+          <li><a href="#">Cheat Sheets</a></li>
+          <li><a href="#">Exercises</a></li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="#">Projects</a></li>
+        </ul>
       </div>
 
-    </div><!-- /#lesson-content -->
-  </main>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
 
-</div><!-- /.layout -->
+    <div class="footer-bottom">
+      <span>© 2026 CodeHub. All rights reserved.</span>
+      <span>Made with ❤️ for learners everywhere</span>
+    </div>
 
-<!-- ════════════════════════════
-     JAVASCRIPT
-════════════════════════════ -->
+  </div>
+</footer>
+
 <script>
-  /* ── LIVE EDITOR ── */
-  const defaultCode = document.getElementById('liveEditor').value;
+  /* Animate progress bars on scroll into view */
+  const bars = document.querySelectorAll('.lang-bar-fill');
+  const widths = Array.from(bars).map(b => b.style.width);
+  bars.forEach(b => b.style.width = '0');
 
-  function runCode() {
-    const code   = document.getElementById('liveEditor').value;
-    const iframe = document.getElementById('livePreview');
-    const doc    = iframe.contentDocument || iframe.contentWindow.document;
-    doc.open();
-    doc.write(code);
-    doc.close();
-  }
-
-  function resetEditor() {
-    document.getElementById('liveEditor').value = defaultCode;
-    runCode();
-  }
-
-  /* Auto-run on page load */
-  window.addEventListener('load', runCode);
-
-  /* ── COPY CODE ── */
-  function copyCode(btn) {
-    const pre = btn.closest('.code-block').querySelector('pre');
-    navigator.clipboard.writeText(pre.innerText).then(() => {
-      btn.textContent = 'Copied!';
-      setTimeout(() => btn.textContent = 'Copy', 2000);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = [...bars].indexOf(entry.target);
+        entry.target.style.width = widths[idx];
+        observer.unobserve(entry.target);
+      }
     });
-  }
+  }, { threshold: 0.3 });
 
-  /* ── SIDEBAR ACTIVE STATE ── */
-  function setActiveSidebarItem(el) {
-    document.querySelectorAll('.sidebar-item')
-            .forEach(i => i.classList.remove('active'));
-    if (el && el.classList.contains('sidebar-item')) {
-      el.classList.add('active');
-    }
-  }
-
-  /* ── LESSON DATA ── */
-  const lessons = {
-    intro: {
-      title: 'HTML Introduction',
-      badge: 'Beginner',
-      time:  '5 min read',
-      content: `
-        <p>HTML stands for <strong>HyperText Markup Language</strong>.
-           It is the standard language used to create webpages.</p>
-
-        <h2>What is HTML?</h2>
-        <p>HTML describes the structure of a webpage using a series of elements.
-           Elements tell the browser how to display content — whether it's a
-           heading, paragraph, image, link, or anything else.</p>
-
-        <div class="callout callout-tip">
-          <strong>💡 Fun Fact</strong>
-          HTML was invented by Tim Berners-Lee in 1991. The first website ever
-          made is still online at info.cern.ch.
-        </div>
-
-        <h2>What Can HTML Do?</h2>
-        <ul>
-          <li>Create the structure and layout of web content</li>
-          <li>Embed images, video, audio, and interactive media</li>
-          <li>Build forms for user input</li>
-          <li>Link pages together with hyperlinks</li>
-        </ul>
-      `
-    },
-
-    elements: {
-      title: 'HTML Elements',
-      badge: 'Beginner',
-      time:  '7 min read',
-      content: `
-        <p>An HTML element is defined by a start tag, some content, and an end tag.</p>
-
-        <h2>Element Syntax</h2>
-        <p>The basic syntax is:
-           <code>&lt;tagname&gt;Content goes here...&lt;/tagname&gt;</code></p>
-
-        <h2>Common HTML Elements</h2>
-        <table class="data-table">
-          <thead>
-            <tr><th>Element</th><th>Description</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>&lt;h1&gt; – &lt;h6&gt;</code></td><td>Headings (largest to smallest)</td></tr>
-            <tr><td><code>&lt;p&gt;</code></td><td>Paragraph</td></tr>
-            <tr><td><code>&lt;a&gt;</code></td><td>Hyperlink</td></tr>
-            <tr><td><code>&lt;img&gt;</code></td><td>Image (self-closing)</td></tr>
-            <tr><td><code>&lt;div&gt;</code></td><td>Generic block container</td></tr>
-            <tr><td><code>&lt;span&gt;</code></td><td>Generic inline container</td></tr>
-          </tbody>
-        </table>
-
-        <div class="callout callout-tip">
-          <strong>💡 Tip</strong>
-          Block elements (like <code>&lt;div&gt;</code>) stack vertically.
-          Inline elements (like <code>&lt;span&gt;</code>) flow within text.
-        </div>
-      `
-    },
-
-    attributes: {
-      title: 'HTML Attributes',
-      badge: 'Beginner',
-      time:  '6 min read',
-      content: `
-        <p>Attributes provide extra information about HTML elements. They are always
-           written inside the opening tag.</p>
-
-        <h2>Attribute Syntax</h2>
-        <p><code>&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;</code></p>
-
-        <h2>Common Attributes</h2>
-        <table class="data-table">
-          <thead>
-            <tr><th>Attribute</th><th>Element(s)</th><th>Purpose</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>href</code></td><td><code>&lt;a&gt;</code></td><td>Link destination URL</td></tr>
-            <tr><td><code>src</code></td><td><code>&lt;img&gt;</code></td><td>Image source URL</td></tr>
-            <tr><td><code>alt</code></td><td><code>&lt;img&gt;</code></td><td>Accessible description of image</td></tr>
-            <tr><td><code>class</code></td><td>Any</td><td>CSS / JS hook</td></tr>
-            <tr><td><code>id</code></td><td>Any</td><td>Unique identifier</td></tr>
-            <tr><td><code>style</code></td><td>Any</td><td>Inline CSS styles</td></tr>
-          </tbody>
-        </table>
-      `
-    }
-  };
-
-  /* ── LOAD LESSON ── */
-  function loadLesson(id, triggerEl) {
-    setActiveSidebarItem(triggerEl);
-
-    const lesson = lessons[id];
-    if (!lesson) return;
-
-    const badgeClass =
-      lesson.badge === 'Beginner'     ? 'badge-beginner'     :
-      lesson.badge === 'Intermediate' ? 'badge-intermediate' :
-                                        'badge-advanced';
-
-    document.getElementById('lesson-content').innerHTML = `
-      <div class="breadcrumb">
-        <span>HTML</span>
-        <span style="color:var(--muted)">›</span>
-        ${lesson.title}
-      </div>
-
-      <h1 class="page-title">${lesson.title}</h1>
-
-      <div class="page-meta">
-        <span class="badge ${badgeClass}">${lesson.badge}</span>
-        <span class="read-time">⏱ ${lesson.time}</span>
-      </div>
-
-      <div class="prose">${lesson.content}</div>
-
-      <div class="lesson-nav">
-        <a class="nav-card prev" href="#">
-          <div class="nav-card-label">← Previous</div>
-          <div class="nav-card-title">Back</div>
-        </a>
-        <a class="nav-card next" href="#">
-          <div class="nav-card-label">Next →</div>
-          <div class="nav-card-title">Continue</div>
-        </a>
-      </div>
-    `;
-  }
-
-  /* ── TOP NAV SECTION SWITCH ── */
-  function showSection(lang, btn) {
-    document.querySelectorAll('.nav-pill')
-            .forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    /* In a real app, swap sidebar content for the chosen language here */
-  }
+  bars.forEach(b => observer.observe(b));
 </script>
 
 </body>
