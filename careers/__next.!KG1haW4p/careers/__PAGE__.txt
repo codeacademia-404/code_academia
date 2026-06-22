@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/05-c3ty_6dwfk.js","/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"children":[["$","h1",null,{"children":"Careers at CodeAcademia"}],["$","p",null,{"children":"Join our mission to make programming education accessible to everyone."}],["$","h2",null,{"children":"Why Work With Us?"}],["$","ul",null,{"children":[["$","li",null,{"children":"Flexible work environment"}],["$","li",null,{"children":"Continuous learning opportunities"}],["$","li",null,{"children":"Work on impactful educational products"}],["$","li",null,{"children":"Collaborative and innovative culture"}]]}],["$","h2",null,{"children":"Current Openings"}],["$","p",null,{"children":"We are currently not hiring. Please check back later for future opportunities."}],["$","h2",null,{"children":"Contact"}],["$","p",null,{"children":"Email: careers@codeacadmia.com"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"MinVVz_KlzWJhMfaV20oj"}
+4:null
