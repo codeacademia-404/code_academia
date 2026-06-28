@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Tags -->
-  <title>About Us | CodeAcademia</title>
-  <meta name="description" content="Learn about CodeAcademia, our educational philosophy, high-quality static programming tutorials, and modern GeeksforGeeks-style tech guides.">
+  <title>Contact Us | CodeAcademia</title>
+  <meta name="description" content="Get in touch with CodeAcademia. Suggest tutorials, report code bugs, or ask questions about our tech education content.">
   
   <!-- Style Sheets -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/article.css"> <!-- Reusing article container styling for content sheets -->
+  <link rel="stylesheet" href="css/article.css">
   <link rel="stylesheet" href="css/responsive.css">
   
   <!-- Google AdSense -->
@@ -32,8 +32,8 @@
           <li><a href="topics/python.html" class="nav-link">Python</a></li>
           <li><a href="topics/dsa.html" class="nav-link">DSA</a></li>
           <li><a href="topics/webdev.html" class="nav-link">Web Dev</a></li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
       </nav>
 
@@ -55,54 +55,68 @@
     </div>
   </header>
 
-  <!-- About Page Content -->
+  <!-- Contact Form Content -->
   <main class="container">
     
-    <!-- Top Leaderboard Ad -->
-    <div class="ad-slot ad-slot-leaderboard" data-ad-type="leaderboard" data-ad-spec="728x90" data-ad-slot-id="about-top-banner"></div>
+    <div class="ad-slot ad-slot-leaderboard" data-ad-type="leaderboard" data-ad-spec="728x90" data-ad-slot-id="contact-top-banner"></div>
 
     <div class="article-container">
       
-      <!-- Left Content Column -->
+      <!-- Contact Form Wrapper -->
       <section class="article-content-wrapper">
         <div class="article-header">
-          <span class="article-category-badge">About Us</span>
-          <h1 class="article-title">Welcome to CodeAcademia</h1>
+          <span class="article-category-badge">Contact</span>
+          <h1 class="article-title">Get in Touch</h1>
         </div>
 
         <div class="article-body">
-          <p><strong>CodeAcademia</strong> is a premium, static educational platform designed to help student developers and experienced tech engineers master programming and system internals. Our philosophy focuses on providing clean, detailed, and structure-first explanations (similar to GeeksforGeeks) but with a beautiful, fast, and modern aesthetic.</p>
+          <p>Have questions about a tutorial? Found a bug in our code examples? Or want to suggest a new topic to write about? Drop us a message using the form below and we will get back to you as soon as possible.</p>
 
-          <h2>Our Mission</h2>
-          <p>We believe that tech documentation should be three things: <strong>accurate, comprehensive, and visual</strong>. We structure our guides to follow clean formatting rules, including step-by-step algorithms, clear code blocks, and contextual summaries. By removing bulk frameworks, our pages load instantly, ensuring that you can access key knowledge without delay.</p>
-
-          <h2>Core Features</h2>
-          <ul>
-            <li><strong>Lightweight Static Architecture:</strong> Pure HTML, CSS, and JS. Zero build time, perfect for GitHub Pages.</li>
-            <li><strong>Interactive Dark Theme:</strong> Soft curated colors designed for long hours of screen reading.</li>
-            <li><strong>Instant Client-side Search:</strong> Search through titles and topics instantly from any page.</li>
-            <li><strong>AdSense Optimized:</strong> Placed strategic ad slot templates designed to capture visibility without hindering the learning experience.</li>
-          </ul>
-
-          <div class="alert-callout alert-callout-info">
-            <svg class="alert-callout-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            <div>
-              <strong>Pro Tip:</strong> You can host this complete resource on GitHub Pages free of charge. Check out the <a href="https://github.com" style="text-decoration:underline; font-weight:600;">GitHub Pages Setup</a> section in the README.md to publish your own copy!
+          <form onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();" style="display:flex; flex-direction:column; gap:1.25rem; margin-top:2rem;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <label for="name" style="font-weight:600; font-size:0.9rem;">Full Name</label>
+                <input type="text" id="name" required class="search-input" placeholder="Your name" style="border-radius: var(--border-radius-md); padding: 0.75rem 1rem; width:100%;">
+              </div>
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <label for="email" style="font-weight:600; font-size:0.9rem;">Email Address</label>
+                <input type="email" id="email" required class="search-input" placeholder="you@example.com" style="border-radius: var(--border-radius-md); padding: 0.75rem 1rem; width:100%;">
+              </div>
             </div>
-          </div>
+            
+            <div style="display:flex; flex-direction:column; gap:0.5rem;">
+              <label for="subject" style="font-weight:600; font-size:0.9rem;">Subject</label>
+              <input type="text" id="subject" required class="search-input" placeholder="What is this about?" style="border-radius: var(--border-radius-md); padding: 0.75rem 1rem; width:100%;">
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:0.5rem;">
+              <label for="message" style="font-weight:600; font-size:0.9rem;">Message</label>
+              <textarea id="message" required class="search-input" rows="6" placeholder="Your message here..." style="border-radius: var(--border-radius-md); padding: 0.75rem 1rem; width:100%; font-family:var(--font-sans); resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start; padding: 0.75rem 2rem;">Send Message</button>
+          </form>
         </div>
       </section>
 
-      <!-- Sidebar Column -->
+      <!-- Sidebar -->
       <aside class="sidebar">
-        <!-- Sidebar Ad Slot -->
-        <div class="ad-slot ad-slot-sidebar" data-ad-type="sidebar" data-ad-spec="300x250" data-ad-slot-id="about-sidebar-ad"></div>
+        <div class="ad-slot ad-slot-sidebar" data-ad-type="sidebar" data-ad-spec="300x250" data-ad-slot-id="contact-sidebar-ad"></div>
 
-        <!-- Developer Info Widget -->
         <div class="sidebar-widget">
-          <h3 class="widget-title">About the Creator</h3>
-          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">CodeAcademia was built by <strong>Sasidhar</strong>, a software developer passionate about educational design, CSS aesthetics, and web optimization.</p>
-          <a href="contact.html" class="btn btn-secondary" style="width:100%;">Get in Touch</a>
+          <h3 class="widget-title">Alternative Methods</h3>
+          <ul class="widget-links">
+            <li class="widget-link-item">
+              <strong>GitHub Issues</strong>
+              <a href="https://github.com" target="_blank" style="font-size:0.85rem;">github.com/codeacademia</a>
+              <span class="widget-link-meta">Report code syntax bugs directly</span>
+            </li>
+            <li class="widget-link-item">
+              <strong>Email</strong>
+              <a href="mailto:support@codeacademia.in" style="font-size:0.85rem;">support@codeacademia.in</a>
+              <span class="widget-link-meta">For advertising or sponsorship</span>
+            </li>
+          </ul>
         </div>
       </aside>
 

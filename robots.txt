@@ -1,0 +1,8 @@
+# Robots.txt for CodeAcademia
+# Allows indexing of all tutorials and categories while identifying the sitemap path.
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://codeacademia.in/sitemap.xml

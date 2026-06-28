@@ -1,0 +1,167 @@
+/* Responsive CSS for CodeAcademia */
+
+/* Large Tablets and Desktops */
+@media (max-width: 1024px) {
+  :root {
+    --max-width: 960px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .articles-feed-section,
+  .article-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+}
+
+/* Tablets and Mobile Devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .navbar-container {
+    height: 60px;
+  }
+
+  /* Hamburger Menu Actions */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 5%;
+    gap: 1.5rem;
+    transition: left var(--transition-normal);
+    z-index: 99;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-actions {
+    gap: 0.75rem;
+  }
+
+  .search-container {
+    display: none; /* Hide top bar search on mobile, hero search is active */
+  }
+
+  /* Hero adjustments */
+  .hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Grid layout modifications */
+  .topics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .topic-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .topic-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .article-card-thumb {
+    width: 100%;
+    height: 140px;
+  }
+
+  .article-content-wrapper {
+    padding: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 1.85rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+  }
+
+  .article-meta-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .article-navigation {
+    flex-direction: column;
+  }
+
+  .nav-article-card-next {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
